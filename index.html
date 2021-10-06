@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - Miraculours</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- fontAweSomeIcon -->
+    <link rel="stylesheet" href="./vendors/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- boostrap grid css -->
+    <link rel="stylesheet" href="./vendors/css/bootstrap-grid.min.css">
+    <!-- boostrap utilities css -->
+    <link rel="stylesheet" href="./vendors/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="./resources/css/styles.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- sideBar Start -->
+        <div class="sideBar hide-tab-phone">
+            <div class="sideBar__logo text-md-center">
+                <img src="https://kamleshyadav.com/wp/miraculous/miraculous-version3/wp-content/uploads/sites/6/2021/08/mini_logo.png" alt="lgo" class="slideBar__logo-img">
+                <h1 class="sideBar__logo-title">The Miraculous</h1>
+            </div>
+            <div class="sideBar-container">
+                <div class="sideBar-nav">
+                    <h4 class="sideBar-nav__heading">browse music</h4>
+                    <ul class="sideBar-nav__list">
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-home sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">discover</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-compact-disc sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">albums</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-microphone-alt sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">Artists</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-podcast sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">radio</a>
+                        </li>
+
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-headphones sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">music</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-gem sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">podcast</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sideBar-nav">
+                    <h4 class="sideBar-nav__heading">browse music</h4>
+                    <ul class="sideBar-nav__list">
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-download sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">dowloads</a>
+                        </li>
+
+
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-podcast sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">purchased</a>
+                        </li>
+
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-heart sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">favourites</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-history sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">history</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sideBar-nav">
+                    <ul class="sideBar-nav__list">
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-list-alt sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">featured playlist</a>
+                        </li>
+                        <li class="sideBar-nav__item">
+                            <i class="fas fa-plus-square sideBar-nav__item-icon"></i>
+                            <a href="" class="sideBar-nav__item-link">create playlist</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="sideBar__close">
+                <i class="fas fa-chevron-left sideBar__close-icon"></i>
+            </div>
+        </div>
+
+        <!-- sideBar End -->
+        <div class="header">
+            <div class="header__search">
+                <input type="text" class="header__search-input" placeholder="Search Music Here..">
+                <i class="fas fa-search header__search-icon"></i>
+            </div>
+            <div class="header-container">
+                <div class="header__languages">
+                    <p class="header__languages-text">Languages</p>
+                    <i class="fas fa-language header__languages-icon"></i>
+                </div>
+                <div class="auth-btn d-sm-none d-md-flex">
+                    <button class="btn btn-primary auth-btn__register">Register</button>
+                    <button class="btn btn-primary auth-btn__login">Login</button>
+                </div>
+                <div class="auth-icon-container d-flex d-sm-flex d-md-none">
+                    <i class="fas fa-user-plus auth-icon"></i>
+                    <i class="fas fa-user auth-icon"></i>
+                </div>
+                <i class="fas fa-bars sideBar-icon"></i>
+            </div>
+
+        </div>
+        <!-- content Start -->
+        <div class="container-fluid content">
+            <div class="content__banner">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="content__select">
+                        <span class="content__option active-option">
+                            <a href="#" class="content__option-link">Today Top Picks</a>
+                        </span>
+                        <span class="content__option">
+                            <a href="#" class="content__option-link">trending songs</a>
+                        </span>
+                        <span class="content__option">
+                            <a href="#" class="content__option-link">new release</a>
+                        </span>
+                    </div>
+                    <ul class="content__songslist-box">
+
+
+                        <!-- <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more ">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon "></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="content__songslist-iner">
+                            <i class="fas fa-play content__songslist-play"></i>
+                            <h4 class="content__songslist-sn">01</h4>
+                            <div class="content__songslist-thumneil">
+                                <img src="./resources/img/dotoc2.jpg" class="content__songslist-img" />
+                            </div>
+                            <h4 class="content__songslist-title">
+                                độ tộc 2
+                            </h4>
+                            <i class="far fa-heart content__songslist-favour"></i>
+                            <div class="content__songslist-more">
+                                <i class="fas fa-ellipsis-v content__songslist-more-icon"></i>
+                                <ul class="content__songslist-more__list">
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-heart"></i> Favourites
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-download"></i> download now
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-list-alt"></i> add to playlist
+                                    </li>
+                                    <li class="content__songslist-more__item">
+                                        <i class="fas fa-share"></i> share
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- content End -->
+        <!-- control Start-->
+        <div class="control-play">
+            <div class="control-play__song">
+
+                <img src="./resources/img/dotoc2.jpg" alt="" class="control-play__song-thumb">
+                <span class="control-play__song-title">Độ Tộc 2</span>
+                <ul class="control-play__song-options">
+                    <li class="control-play__song-item">
+                        <i class="fas fa-download"></i> download now
+                    </li>
+                    <li class="control-play__song-item">
+                        <i class="fas fa-heart"></i> Favourites
+                    </li>
+
+                    <li class="control-play__song-item">
+                        <i class="fas fa-list-alt"></i> add to playlist
+                    </li>
+                    <li class="control-play__song-item">
+                        <i class="fas fa-share"></i> share
+                    </li>
+                </ul>
+                <i class="fas fa-chevron-right control-play__song-icon"></i>
+                <audio id="myAudio" src="./resources/music/Do-Toc-2.mp3"></audio>
+
+            </div>
+
+            <div class="control-play-wrapper">
+                <div class="control-box">
+                    <div class="btn-control btn-prev">
+                        <i class="fas fa-backward"></i>
+                    </div>
+                    <div class="btn-control btn-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="btn-control btn-next">
+                        <i class="fas fa-forward"></i>
+
+                    </div>
+                </div>
+
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                <div class="control-box">
+                    <div class="btn-control btn-random ">
+                        <i class="fas fa-random"></i>
+
+                    </div>
+                    <div class="btn-control btn-repeat ">
+                        <i class="fas fa-redo"></i>
+
+                    </div>
+                </div>
+                <div class="control-play__close ">
+                    <i class="fas fa-chevron-left control-play__close-icon "></i>
+                </div>
+            </div>
+            <!-- control End -->
+
+        </div>
+        <script src="./vendors/js/jquery-3.6.0.js"></script>
+
+        <script src="./resources/js/script.js"></script>
+</body>
+
+</html>

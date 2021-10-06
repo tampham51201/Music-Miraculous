@@ -1,0 +1,26 @@
+@mixin respond($breakpoint) {
+    @if($breakpoint==tab-phone) {
+        @media (max-width: 1023px) {
+            @content
+        }
+        ;
+    }
+    @if($breakpoint==tab) {
+        @media (max-width: 1023px) and (min-width: 740px) {
+            @content
+        }
+        ;
+    }
+    @if($breakpoint==phone) {
+        @media (max-width: 739px) {
+            @content;
+        }
+    }
+}
+
+@mixin text-link {
+    font-size: 1.8rem;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: capitalize;
+}

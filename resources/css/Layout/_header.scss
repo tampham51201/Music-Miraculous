@@ -1,0 +1,115 @@
+.header {
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 0 12rem;
+    background-color: transparent;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: linear .4s;
+    z-index: 998;
+    @include respond(tab-phone) {
+        padding: 0 1rem;
+    }
+    &.toggle {
+        padding-left: 26rem;
+        @include respond(tab-phone) {
+            padding: 0 1rem;
+        }
+    }
+    &__search {
+        height: 5rem;
+        width: 52rem;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #172533;
+        box-shadow: 0 0 0.1rem black;
+        padding: 0 2rem;
+        margin-right: 2rem;
+        @include respond(phone) {
+            padding: 0 1rem;
+            height: 4rem;
+            width: 30rem;
+            margin-right: 0rem;
+        }
+        &-input {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            outline: none;
+            color: $color-white;
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
+        }
+        &-icon {
+            cursor: pointer;
+        }
+    }
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__languages {
+        margin-right: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include respond(phone) {
+            display: none;
+        }
+        &-text {
+            font-size: 1.4rem;
+            color: $color-primary;
+            margin-right: 2rem;
+            @include respond(tab-phone) {
+                margin-right: 1rem;
+            }
+        }
+        &-icon {
+            color: $color-white;
+            font-size: 2.6rem;
+        }
+    }
+    .auth-btn {
+        display: none;
+        justify-content: space-between;
+        &__register {
+            margin-right: 0.5rem;
+        }
+    }
+    .auth-icon {
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.4rem;
+        margin-left: 0.5rem;
+        color: $color-white;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background: $color-primary;
+        cursor: pointer;
+    }
+    .sideBar-icon {
+        font-size: 2.8rem;
+        margin-left: 0.5rem;
+        color: $color-primary;
+        display: none;
+        width: 2rem;
+        transition: transform linear .4s;
+        @include respond(tab-phone) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.fa-times {
+            transform: rotateZ(180deg);
+        }
+    }
+}

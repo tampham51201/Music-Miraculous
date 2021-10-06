@@ -1,0 +1,222 @@
+.content {
+    background-image: linear-gradient( to right bottom, #121626, #14182a);
+    padding: 0 0 0 12rem;
+    transition: all linear .4s;
+    height: 120vh;
+    overflow: hidden;
+    @include respond(tab-phone) {
+        padding: 0 1rem;
+        height: 100vh;
+    }
+    &.toggle {
+        padding-left: 26rem;
+        @include respond(tab-phone) {
+            padding: 0 1rem;
+        }
+    }
+    &__banner {
+        background-image: url(https://kamleshyadav.com/wp/miraculous/version3/wp-content/uploads/sites/6/2021/08/10.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+    &__select {
+        position: relative;
+        padding: 16rem 0 2rem;
+        display: flex;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 90%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient( to right, $text-color 10%, rgba($text-color, 0s));
+        }
+    }
+    &__option {
+        display: block;
+        margin-right: 6rem;
+        height: 100%;
+        position: relative;
+        @include respond(tab-phone) {
+            margin-right: 3rem;
+        }
+        &-link {
+            @include text-link;
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
+            &::after {
+                z-index: 100;
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 1px;
+                left: 50%;
+                bottom: -2rem;
+                transform: translateX(-50%);
+                background-color: $color-primary;
+                transition: transform linear .4s;
+            }
+        }
+        &.active-option &-link {
+            color: $color-primary;
+            &::after {
+                width: 80%;
+            }
+        }
+    }
+    &__songslist {
+        &-box {
+            width: 100%;
+            height: 60rem;
+            overflow-y: scroll;
+            margin-top: 2rem;
+            padding: 0;
+            cursor: pointer;
+            @include respond(tab) {
+                height: 55rem;
+            }
+            @include respond(phone) {
+                height: 50rem;
+            }
+            &::-webkit-scrollbar {
+                width: .3rem;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $color-white;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                width: .3rem;
+                background-color: $color-primary;
+            }
+        }
+        &-iner {
+            color: #a2abb8;
+            list-style: none;
+            margin: 2rem 0 0;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            height: 7.2rem;
+            border-radius: 1rem;
+            background-color: $color-seconary;
+            padding: 0 2rem;
+            transition: all linear .3s;
+            position: relative;
+            justify-content: space-between;
+            @include respond(tab-phone) {
+                padding: 0 1rem;
+            }
+            &:hover {
+                background-color: $color-primary;
+                color: #ffffff;
+            }
+        }
+        &-sn {
+            padding: 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-right: 3.4rem;
+            @include respond(tab-phone) {
+                margin-right: 2rem;
+            }
+        }
+        &-thumneil {
+            min-width: 5.2rem;
+            height: 5.2rem;
+            overflow: hidden;
+            border-radius: .4rem;
+            margin-right: 2.4rem;
+            position: relative;
+            @include respond(tab-phone) {
+                min-width: 4rem;
+                height: 4rem;
+            }
+        }
+        &-img {
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-title {
+            font-family: sans-serif;
+            text-transform: capitalize;
+            width: 33rem;
+        }
+        &-favour {
+            font-size: 1.9rem;
+            cursor: pointer;
+            margin-right: 10rem;
+            @include respond(tab-phone) {
+                margin-right: 2rem;
+            }
+        }
+        &-more {
+            position: relative;
+            &-icon {
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__list {
+                width: 19rem;
+                color: $color-primary;
+                margin: 0;
+                list-style: none;
+                background-color: #202e44;
+                position: absolute;
+                right: -1rem;
+                top: 120%;
+                padding: 0 3rem 2rem;
+                border-radius: .5rem;
+                cursor: pointer;
+                z-index: 100;
+                display: none;
+                &::after {
+                    content: "";
+                    border-width: 2rem;
+                    border-style: solid;
+                    border-color: transparent transparent #202e44 transparent;
+                    top: -3.6rem;
+                    right: .9rem;
+                    position: absolute;
+                }
+            }
+            &__item {
+                font-size: 1.3rem;
+                font-weight: 300;
+                text-transform: capitalize;
+                display: flex;
+                margin-top: 2rem;
+                i {
+                    margin-right: 1.2rem;
+                }
+            }
+        }
+        &-play {
+            padding: 1.2rem;
+            border-radius: 50%;
+            background-color: #ff0000;
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            font-size: 1rem;
+            transition: all linear .3s;
+            opacity: 0;
+            @include respond(tab-phone) {
+                left: .4rem;
+            }
+        }
+        &-iner:hover &-play {
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+    }
+}

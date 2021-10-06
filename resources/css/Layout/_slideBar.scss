@@ -1,0 +1,159 @@
+                    .sideBar {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 8rem;
+                        height: 100vh;
+                        background-color: $color-seconary;
+                        transition: linear .4s;
+                        z-index: 1000;
+                        @include respond(tab-phone) {
+                            &.hide-tab-phone {
+                                left: -100%;
+                            }
+                        }
+                        &.active {
+                            left: 0;
+                            width: 22rem;
+                        }
+                        &__logo {
+                            margin-top: 2.8rem;
+                            width: 100%;
+                            text-align: center;
+                            &-img {
+                                height: 4.4rem;
+                            }
+                            &-title {
+                                display: none;
+                                margin: 0;
+                                font-size: 1.8rem;
+                                color: $color-primary;
+                                font-weight: 500;
+                            }
+                        }
+                        &-container {
+                            overflow-y: scroll;
+                            height: 90%;
+                            padding-bottom: 10rem;
+                            margin-top: 1.8rem;
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+                            // &::-webkit-scrollbar-thumb {
+                            //     background: $text-color;
+                            //     border-radius: 5px;
+                            // }
+                        }
+                        &-nav {
+                            list-style: none;
+                            margin: 0 0 5rem;
+                            padding: 0;
+                            &__heading {
+                                font-weight: 500;
+                                margin: 3rem 0;
+                                text-transform: uppercase;
+                                display: none;
+                            }
+                            &__list {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                            }
+                            &__item {
+                                cursor: pointer;
+                                margin: 2rem 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                &-icon {
+                                    color: $color-white;
+                                    font-size: 2.4rem;
+                                    width: 3rem;
+                                    text-align: center;
+                                    margin: 0;
+                                }
+                                &-link {
+                                    &:link,
+                                    &:visited {
+                                        text-decoration: none;
+                                        color: $text-color;
+                                        font-weight: 400;
+                                        text-transform: capitalize;
+                                        transition: all linear .3s;
+                                        position: absolute;
+                                        font-size: 1rem;
+                                        background-color: $color-white;
+                                        border-radius: 2px;
+                                        padding: 0.5rem;
+                                        border: 0.05rem solid $color-seconary;
+                                        display: none;
+                                    }
+                                }
+                                &:hover &-link {
+                                    color: $color-primary;
+                                    transition: all linear .3s;
+                                }
+                                &-icon:hover+&-link {
+                                    display: block;
+                                    color: $text-color;
+                                }
+                            }
+                        }
+                        &__close {
+                            position: absolute;
+                            height: 7rem;
+                            width: 7rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -2.6rem;
+                            border-radius: 50%;
+                            background-color: $color-seconary;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            cursor: pointer;
+                            z-index: -4;
+                            @include respond(tab-phone) {
+                                display: none;
+                            }
+                            &-icon {
+                                margin-right: 1.3rem;
+                                font-size: 1.6rem;
+                                transition: linear .3s;
+                                color: $text-color;
+                                transform: rotateZ(180deg);
+                                &:hover {
+                                    color: $color-primary;
+                                    transition: linear .3s;
+                                }
+                            }
+                        }
+                        &.active {
+                            .sideBar__close-icon {
+                                transform: rotateZ(0);
+                            }
+                            .sideBar__logo-title,
+                            .sideBar-nav__heading {
+                                display: block;
+                            }
+                            .sideBar-nav__item-link {
+                                position: initial;
+                                font-size: 1.5rem;
+                                background-color: transparent;
+                                border-radius: 2px;
+                                padding: 0;
+                                border: none;
+                                display: block;
+                            }
+                            .sideBar-container {
+                                padding-left: 3rem;
+                                padding-bottom: 10rem;
+                            }
+                            .sideBar-nav__item {
+                                justify-content: start;
+                            }
+                            .sideBar-nav__item-icon {
+                                margin-right: 1rem;
+                            }
+                        }
+                    }

@@ -1,0 +1,29 @@
+.btn {
+    min-width: 12rem;
+    height: 3.6rem;
+    text-align: center;
+    line-height: 3.6rem;
+    border-radius: 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: all linear .4s;
+    &-primary {
+        background-color: $color-primary;
+        color: $color-white;
+        &:hover {
+            box-shadow: 0 0 22px rgba($color-primary, 1);
+        }
+    }
+    &-control {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        border-radius: 50%;
+        background-color: rgba(black, .2);
+        margin: 0.8rem;
+        cursor: pointer;
+    }
+}

@@ -61,7 +61,7 @@ $(document).ready(() => {
 
             },
         ],
-        currentIndex: 1,
+        currentIndex: 0,
         isPlaying: false,
         isRandom: false,
         isRepeat: false,

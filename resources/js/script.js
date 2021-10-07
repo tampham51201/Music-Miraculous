@@ -7,7 +7,7 @@ $(document).ready(() => {
         songs: [{
                 name: "độ tộc 2",
                 singer: "độ mixi",
-                path: "./resources/music/Do-Toc-2.mp3",
+                path: "./resources/music/do-toc-2.mp3",
                 img: "./resources/img/dotoc2.jpg"
 
             },
@@ -21,7 +21,7 @@ $(document).ready(() => {
             {
                 name: "đi về nha",
                 singer: "Đen vâu",
-                path: "./resources/music/Divenha.mp3",
+                path: "./resources/music/divenha.mp3",
                 img: "./resources/img/imgdivenha.jpg"
 
             },

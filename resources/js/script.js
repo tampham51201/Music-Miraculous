@@ -57,6 +57,7 @@ $(document).ready(() => {
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    isProgress: false,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     setConfig: function (key, value) {
       this.config[key] = value;
@@ -197,18 +198,24 @@ $(document).ready(() => {
           const progress = Math.floor(
             ($(this).prop("currentTime") / $(audio).prop("duration")) * 100
           );
-          if ($(".progress").on("input")) {
-            $(".progress").val();
-          } else $(".progress").val(progress);
+          if (!app.isProgress) {
+            $(".progress").val(progress);
+          }
         }
       });
+
       // tua thanh progress
+      $(".progress").on("input", function () {
+        const seekTime =
+          ($(".progress").val() / 100) * $(audio).prop("duration");
+        app.isProgress = true;
+      });
 
       $(".progress").on("mouseup", function () {
         const seekTime =
           ($(".progress").val() / 100) * $(audio).prop("duration");
-
         $(audio).prop("currentTime", seekTime);
+        app.isProgress = false;
       });
 
       //xử lý sự kiện khi bài nhạc kết thúc
